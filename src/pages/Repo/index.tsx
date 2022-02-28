@@ -31,7 +31,7 @@ interface IGitHubIssue {
   }
 }
 
-export const Repo: React.FC = () => {
+const Repo: React.FC = () => {
   const [repository, setRepository] = React.useState<IGitHubRepository | null>(null)
   const [issues, setIssues] = React.useState<IGitHubIssue[]>([])
   const { params } = useRouteMatch<IRepositoryParams>()
@@ -96,3 +96,5 @@ export const Repo: React.FC = () => {
     </>
   )
 }
+
+export default Repo
